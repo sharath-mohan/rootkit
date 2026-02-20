@@ -9,6 +9,7 @@ Currently, the following modules are available:
 ### [Postgres](./postgres)
 
 - **[PgBouncer + Python/SQLAlchemy Integration](./postgres/pgbouncer)**: A demonstration of efficient connection pooling using PgBouncer between a Python application and a PostgreSQL database.
+- **[Table Partitioning](./postgres/partition)**: Examples of List, Range, and Hash partitioning strategies in PostgreSQL to optimize large dataset management.
 
 ## 🛠️ Tech Stack
 
