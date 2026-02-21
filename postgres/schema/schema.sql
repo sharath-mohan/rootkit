@@ -1,0 +1,38 @@
+-- create schema
+CREATE SCHEMA ADMIN;
+
+-- get current schema
+SELECT
+	CURRENT_SCHEMA();
+
+CREATE TABLE ADMIN.USERS (ID SERIAL PRIMARY KEY, NAME TEXT NOT NULL);
+
+INSERT INTO
+	ADMIN.USERS (NAME)
+VALUES
+	('Sam');
+
+SELECT
+	*
+FROM
+	ADM.USERS;
+
+-- get all schema
+SELECT
+	*
+FROM
+	PG_CATALOG.PG_NAMESPACE
+ORDER BY
+	NSPNAME;
+
+--rename schema
+ALTER SCHEMA ADMIN
+RENAME TO ADM;
+
+-- drop empty schema
+DROP SCHEMA IF EXISTS FINANCE;
+
+CREATE SCHEMA FINANCE;
+
+-- delete schema even if it has tables or views
+DROP SCHEMA IF EXISTS ADM CASCADE;
